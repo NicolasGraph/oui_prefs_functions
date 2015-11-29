@@ -77,9 +77,9 @@ if (0) {
 
 h1. oui_prefs_functions
 
-p. This plugin allow the use of the following functions as html values of custom prefs.
+p. This plugin allow the use the following functions as html values of custom prefs.
 
-h3. Functions
+h2. Functions
 
 * oui_prefs_section_list
 * oui_prefs_category_list

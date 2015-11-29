@@ -1,3 +1,17 @@
 h1. oui_prefs_functions
 
-Coming soon…
+p. This plugin allow the use the following functions as html values of custom prefs.
+
+h2. Functions
+
+* oui_prefs_section_list
+* oui_prefs_category_list
+* oui_prefs_cat_article_list
+* oui_prefs_cat_image_list
+* oui_prefs_cat_link_list
+* oui_prefs_cat_file_list
+* oui_prefs_article_list
+* oui_prefs_image_list
+* oui_prefs_link_list
+* oui_prefs_file_list
+* oui_prefs_style_list
