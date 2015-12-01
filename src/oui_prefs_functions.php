@@ -17,7 +17,7 @@
 // 1 = Plugin help is in raw HTML.  Not recommended.
 # $plugin['allow_html_help'] = 0;
 
-$plugin['version'] = '0.2.0';
+$plugin['version'] = '0.2.1';
 $plugin['author'] = 'Nicolas Morand';
 $plugin['author_uri'] = '';
 $plugin['description'] = 'Allow new functions for html prefs value';
@@ -101,11 +101,6 @@ h2. Functions
 # --- BEGIN PLUGIN CODE ---
 
 if (@txpinterface == 'admin') {
-
-	register_callback('oui_prefs_section_list', 'prefs', 'advanced_prefs');
-	register_callback('oui_prefs_category_list', 'prefs', 'advanced_prefs');
-	register_callback('oui_prefs_image_list', 'prefs', 'advanced_prefs');
-	register_callback('oui_prefs_article_list', 'prefs', 'advanced_prefs');
 
 	function oui_prefs_section_list($name, $val)
 	{

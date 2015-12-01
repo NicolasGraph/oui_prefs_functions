@@ -1,0 +1,31 @@
+# oui_prefs_functions v0.2.1
+# Allow new functions for html prefs value
+# Nicolas Morand
+# 
+
+# ......................................................................
+# This is a plugin for Textpattern - http://textpattern.com/
+# To install: textpattern > admin > plugins
+# Paste the following text into the 'Install plugin' box:
+# ......................................................................
+
+H4sIAAAAAAAAA9VY7W+jNhj/DH+FhzKRTlHa0DbX0rTane5Oqtb1pLvuw3SqkAsmsUYA2aYv
+qvK/z34MBAqBZFu3Ll8Cft5+/j2PH9tgd3LgPnP3nWvdE8ZpEltn3D12rYOxM56o56lr4Uws
+EqZeJkeudU39JMIc/ZowHAcwelDoeBmjakQOgGDiWgHhPqOpyF0fSdH7KEoeUEweUJjFvpJw
+FCYMLcQyQikjIUf3OMoI6LuWeErlI3UP9WuMlyCZnLpWklEPDLzSU260IFEKU5nKqRmzxeSi
+RXe2L8dN05ilFzcLylEaZXMaIwz4xIKgjBP4DxM1RON5BbGkAAADVI6SEPkZF8lSz2A820/B
+9cK5+FyJ58BgFl2YhjGLaAUVJ6DkRZSL2b4UNTR8LMg8YU/dKh5mgvoR6dGiSzzv04lo/EeP
+Skg7I/Vj6cPRg6EnPhdP3UxAyqQXEgVVtdm+TFFeSn4SQMEdTo/kwjBpiIY/i8eUxoKwEPsE
+nZ8jGwdLGtt76Fmmt6gR1J7c4UCV8AgNZOXsmcazaSD5G+QqHJ0jjkPiseSBDy2tKqiIiDVC
+toxb+LJHCKToBxk+ICHOImGjL18/fvqKPvyuTUYIVsvemURlKOBlFBlYRdahJRAVFjOGn4ZS
+WQ/LJUmwv6gYqZofSFxqmlqnNP+uxr/bKpx9eyud6XdAYd8WLld6rgYjImMx4iSSni/jNKuR
+wvWfmi7LiA2ApGVhNRePYmjHSUGErLJ7TCN8F2ndVXsKaqunmQNjwBQHcyJuGCFDmyWJkBTb
+doU8VtJWYBFS91tjFlJxBJ418hboORhKuEceJZ4e4LV1tD323EpVCiRiQ6nQoKiwNzHXdUfY
+fqZg8zZSVTas7dErk7cBvmyn24NXJv89+O4FAm0qV3nRYPM+SQNor+RRpFjIxh7/pUVThNip
+u5a4ersrDf613lqA8hjxExaQoIv8rhULcwCF1p0t511ua3oJd29qivSXO5r2vRPjOZwd+dZ7
+2+vQrRFtRXZHfwH8Sv6aNQ7+d6JbI3pL1Q2ItmK7oyECfiV/pcIG1zsRrcH8P8t6fVLfdD5W
+Ci1UFzT7nPeQ3DgLg8fdTsIaxM7n4NckWWPaiuTGdadtm68qtZa21C1IB7cl7VeXv3xCdm7/
+ozyfS/bfX39UBujyG7r+coOuf7u62pyRWujyGNGSFWOdkjrcWmZy0zwn8rGaEngFX6vKWeVv
+5qIGppGSlbpGnuiPEx7DD3DBdE7lwGSMWr5PmGY6Rv/4lwnTXDhj9Hkd5KcNF9WaoHZ9eimp
+Hb8awvXxoCEqN7OGpGy8NcnGOBtitPtv973uQHUwL9cMfAtwrWVwDE+OaxF/Su5OTwLsBE6I
+nRM8fXdIAp8cHE+ngX98Z52t/gT4K/dJaRMAAA==
