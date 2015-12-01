@@ -17,7 +17,7 @@
 // 1 = Plugin help is in raw HTML.  Not recommended.
 # $plugin['allow_html_help'] = 0;
 
-$plugin['version'] = '0.2.1';
+$plugin['version'] = '0.2.2';
 $plugin['author'] = 'Nicolas Morand';
 $plugin['author_uri'] = '';
 $plugin['description'] = 'Allow new functions for html prefs value';
@@ -254,7 +254,7 @@ if (@txpinterface == 'admin') {
 
 	function oui_prefs_custom_field_list($name, $val)
 	{
-		$custom_fields = safe_rows("name, val", 'txp_prefs', "name LIKE 'custom_%_set' AND val IS NOT NULL ORDER BY name");
+		$custom_fields = safe_rows("name, val", 'txp_prefs', "name LIKE 'custom_%_set' AND val<>'' ORDER BY name");
 
 		if ($custom_fields)
 		{
