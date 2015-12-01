@@ -17,7 +17,7 @@
 // 1 = Plugin help is in raw HTML.  Not recommended.
 # $plugin['allow_html_help'] = 0;
 
-$plugin['version'] = '0.1';
+$plugin['version'] = '0.2.0';
 $plugin['author'] = 'Nicolas Morand';
 $plugin['author_uri'] = '';
 $plugin['description'] = 'Allow new functions for html prefs value';
@@ -92,6 +92,7 @@ h2. Functions
 * oui_prefs_link_list
 * oui_prefs_file_list
 * oui_prefs_style_list
+* oui_prefs_custom_field_list
 
 # --- END PLUGIN HELP ---
 <?php
@@ -105,104 +106,107 @@ if (@txpinterface == 'admin') {
 	register_callback('oui_prefs_category_list', 'prefs', 'advanced_prefs');
 	register_callback('oui_prefs_image_list', 'prefs', 'advanced_prefs');
 	register_callback('oui_prefs_article_list', 'prefs', 'advanced_prefs');
-	
+
 	function oui_prefs_section_list($name, $val)
 	{
 	    $sections = safe_rows("name, title", 'txp_section', "name != 'default' ORDER BY title, name");
-	    $vals = array();
-	    foreach ($sections as $row) {
-	        $vals[$row['name']] = $row['title'];
-	    }
+
 		if ($sections)
 		{
+		    $vals = array();
+		    foreach ($sections as $row) {
+		        $vals[$row['name']] = $row['title'];
+		    }
 	    	return selectInput($name, $vals, $val, 'true');
 		}
 		return gtxt('no_sections_available');
 	}
-	
+
 	function oui_prefs_category_list($name, $val)
 	{
 		$rs = getTree('root', '');
-	
+
 		if ($rs)
 		{
 			return treeSelectInput($name,$rs,$val);
 		}
-	
+
 		return gtxt('no_categories_exist');
 	}
-	
+
 	function oui_prefs_cat_article_list($name, $val)
 	{
-		$rs = getTree('root', 'article');
-	
+		$rs = getTree('root', 'article', "title != 'default' ORDER BY id, title");
+
 		if ($rs)
 		{
 			return treeSelectInput($name,$rs,$val);
 		}
-	
+
 		return gtxt('no_categories_exist');
 	}
-	
+
 	function oui_prefs_cat_image_list($name, $val)
 	{
 		$rs = getTree('root', 'image');
-	
+
 		if ($rs)
 		{
 			return treeSelectInput($name,$rs,$val);
 		}
-	
+
 		return gtxt('no_categories_exist');
 	}
-	
+
 	function oui_prefs_cat_link_list($name, $val)
 	{
 		$rs = getTree('root', 'link');
-	
+
 		if ($rs)
 		{
 			return treeSelectInput($name,$rs,$val);
 		}
-	
+
 		return gtxt('no_categories_exist');
 	}
-	
+
 	function oui_prefs_cat_file_list($name, $val)
 	{
 		$rs = getTree('root', 'file');
-	
+
 		if ($rs)
 		{
 			return treeSelectInput($name,$rs,$val);
 		}
-	
+
 		return gtxt('no_categories_exist');
 	}
 
 	function oui_prefs_article_list($name, $val)
 	{
 	    $articles = safe_rows("title, id", 'textpattern', "title != 'default' ORDER BY id, title");
-	    $vals = array();
-	    foreach ($articles as $row) {
-	        $vals[$row['id']] = $row['title'];
-	    }
+
 		if ($articles)
 		{
+		    $vals = array();
+		    foreach ($articles as $row) {
+		        $vals[$row['id']] = $row['title'];
+		    }
 	    	return selectInput($name, $vals, $val, 'true');
 		}
 		return gtxt('no_articles_recorded');
 	}
-	
+
 	function oui_prefs_image_list($name, $val)
 	{
 	    $images = safe_rows("name, id", 'txp_image', "name != 'default' ORDER BY id, name");
-	    $vals = array();
-	    foreach ($images as $row) {
-	        $vals[$row['id']] = $row['name'];
-	    }
+
 		if ($images)
 		{
+		    $vals = array();
+		    foreach ($images as $row) {
+		        $vals[$row['id']] = $row['name'];
+		    }
 	    	return selectInput($name, $vals, $val, 'true');
 		}
 		return gtxt('no_images_recorded');
@@ -211,12 +215,13 @@ if (@txpinterface == 'admin') {
 	function oui_prefs_link_list($name, $val)
 	{
 	    $links = safe_rows("title, id", 'textpattern', "title != 'default' ORDER BY id, title");
-	    $vals = array();
-	    foreach ($links as $row) {
-	        $vals[$row['id']] = $row['title'];
-	    }
+
 		if ($links)
 		{
+		    $vals = array();
+		    foreach ($links as $row) {
+		        $vals[$row['id']] = $row['title'];
+		    }
 	    	return selectInput($name, $vals, $val, 'true');
 		}
 		return gtxt('no_links_recorded');
@@ -225,31 +230,48 @@ if (@txpinterface == 'admin') {
 	function oui_prefs_file_list($name, $val)
 	{
 	    $files = safe_rows("name, id", 'txp_image', "name != 'default' ORDER BY id, name");
-	    $vals = array();
-	    foreach ($files as $row) {
-	        $vals[$row['id']] = $row['name'];
-	    }
+
 		if ($files)
 		{
+		    $vals = array();
+		    foreach ($files as $row) {
+		        $vals[$row['id']] = $row['name'];
+		    }
 	    	return selectInput($name, $vals, $val, 'true');
 		}
 		return gtxt('no_images_recorded');
 	}
-		
+
 	function oui_prefs_style_list($name, $val)
 	{
 	    $styles = safe_rows("name", 'txp_css', "name != 'default' ORDER BY name");
-	    $vals = array();
-	    foreach ($styles as $row) {
-	        $vals[$row['name']] = $row['name'];
-	    }
+
 		if ($styles)
 		{
+		    $vals = array();
+		    foreach ($styles as $row) {
+		        $vals[$row['name']] = $row['name'];
+		    }
 	    	return selectInput($name, $vals, $val, 'true');
 		}
 		return gtxt('no_styles_recorded');
 	}
 
+	function oui_prefs_custom_field_list($name, $val)
+	{
+		$custom_fields = safe_rows("name, val", 'txp_prefs', "name LIKE 'custom_%_set' AND val IS NOT NULL ORDER BY name");
+
+		if ($custom_fields)
+		{
+			$vals = array();
+			foreach ($custom_fields as $row) {
+				$vals[$row['val']] = $row['val'];
+			}
+			return selectInput($name, $vals, $val, 'true');
+		}
+		return gtxt('no_custom_fields_recorded');
+	}
+	
 }
 # --- END PLUGIN CODE ---
 
