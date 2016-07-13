@@ -2,6 +2,8 @@ h1. oui_prefs_functions
 
 p. This plugin allow the use the following functions as html values of custom prefs.
 
+*Work in progress.*
+
 h2. Functions
 
 * oui_prefs_section_list

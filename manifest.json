@@ -1,0 +1,24 @@
+{
+    "name"        : "oui_pref_functions",
+    "description" : "Allow new functions for html prefs value",
+    "version"     : "0.2.4",
+    "type"        : 1,
+    "author"      : "Nicolas Morand",
+    "author_uri"  : "http://github.com/NicolasGraph",
+    "order"       : 5,
+    "flags"       : 3,
+    "help"        : {"file" : ["./README.textile"]},
+    "code": {"file" : [
+        "./src/article_list.php",
+        "./src/cat_article_list.php",
+        "./src/cat_file_list.php",
+        "./src/cat_image_list.php",
+        "./src/cat_link_list.php",
+        "./src/custom_field_list.php",
+        "./src/file_list.php",
+        "./src/image_list.php",
+        "./src/link_list.php",
+        "./src/section_list.php",
+        "./src/style_list.php"
+    ]}
+}
